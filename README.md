@@ -28,7 +28,7 @@ Make sure you have the following installed on your machine:
 ### Installation
 
 1.  **Clone the repository:**
-    git clone [your_repository_url]
+    gh repo clone Tristanic07/nestjs-crud-test
     cd todo-list
     
 2.  **Install dependencies:**
@@ -42,10 +42,10 @@ Make sure you have the following installed on your machine:
 3.  **Configure the database:**
     * Create a PostgreSQL database and update the connection string in your backend's `.env` file.
     * Run database migrations to set up the necessary tables.
-    ```bash
-    # (replace with your specific NestJS migration command)
-    npm run migration:run
-    ```
+
+    cd backend
+    npx prisma migrate dev --name init
+    
 4.  **Start the backend server:**
     * Open a new terminal, navigate to the `backend` folder, and start the server.
     
@@ -57,4 +57,5 @@ Make sure you have the following installed on your machine:
     
     cd frontend
     npm run dev
+
 
